@@ -1,7 +1,7 @@
 import turtle
 from turtle import Turtle
 
-from global_constants import PLAYER_STEPS, PLAYER_SHAPE1, HEADINGS
+from global_constants import PLAYER_STEPS, PLAYER_SHAPE1, HEADINGS, PLAYER_DEFAULT_POSITION
 
 turtle.addshape(PLAYER_SHAPE1)
 
@@ -13,6 +13,7 @@ class Player(Turtle):
         super().__init__()
         self.penup()
         self.shape(PLAYER_SHAPE1)
+        self.goto(PLAYER_DEFAULT_POSITION)
         self.steps = PLAYER_STEPS
 
     def go_up(self):
